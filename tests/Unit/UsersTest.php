@@ -24,5 +24,11 @@ class UsersTest extends TestCase
         $user=new User();
         $this->assertTrue($user->save());
     }
+    public function deleteUser()
+    {
+        $user= new User();
+        $user->save();
+        $this->assertTrue($user->delete());
+    }
 }
 
