@@ -30,5 +30,9 @@ class UsersTest extends TestCase
         $user->save();
         $this->assertTrue($user->delete());
     }
+    public function updateName()
+    {
+
+    }
 }
 
