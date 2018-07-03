@@ -20,4 +20,9 @@ class CarsTest extends TestCase
         $this->assertTrue(true);
 
     }
+    public function checkYearType()
+    {
+        $this->assertInternalType('int', $this->year);
+    }
+    
 }
