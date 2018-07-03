@@ -17,9 +17,10 @@ class UsersTest extends TestCase
     public function testExample()
     {
         $this->assertTrue(true);
+
     }
 
-    public function insertUser()
+   public function insertUser()
     {
         $user=new User();
         $this->assertTrue($user->save());
@@ -32,6 +33,9 @@ class UsersTest extends TestCase
     }
     public function updateName()
     {
+        $user=User::inRandomOrder()->first();
+        $user->name='Steve Smith';
+        $this->assertTrue($user->save());
 
     }
 }
