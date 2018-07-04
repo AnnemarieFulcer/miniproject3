@@ -21,23 +21,26 @@ class UsersTest extends TestCase
 
     }*/
 
- /*  public function testInsertUser()
+  public function testInsertUser()
     {
+
         $user1=new User();
+        $user1->name="name";
+        $user1->email="email";
+        $user1->password="password";
+        $user1->remember_token="REMEMBER TOKEN";
+       $this->assertTrue($user1->save());
+    }
 
-        $this->assertTrue($user1->save());
-    }*/
-
-
-
- public function testUserCount(){
-     $this->assertEquals(50, User::count());
- }
    public function testDeleteUser()
     {
         $user2=User::inRandomOrder()->first();
 
         $this->assertTrue($user2->delete());
+    }
+
+    public function testUserCount(){
+     $this->assertEquals(50, User::count());
     }
    public function testUpdateName()
     {
