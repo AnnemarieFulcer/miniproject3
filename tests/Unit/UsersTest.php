@@ -39,9 +39,11 @@ class UsersTest extends TestCase
         $this->assertTrue($user2->delete());
     }
 
-    public function testUserCount(){
+    public function testUserCount()
+    {
      $this->assertEquals(50, User::count());
     }
+
    public function testUpdateName()
     {
         $user3=User::inRandomOrder()->first();
