@@ -14,15 +14,17 @@ class CarsTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+   /* public function testExample()
     {
 
         $this->assertTrue(true);
 
-    }
-    public function checkYearType()
+    }*/
+    public function testYearType()
     {
-        $this->assertInternalType('int', $this->year);
+        $car1=car::inRandomOrder()->first();
+        $this->assertInternalType('string', $car1->year);
+
     }
-    
+
 }

@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use Faker\Provider\UserAgent;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -14,29 +15,38 @@ class UsersTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+  /*  public function testExample()
     {
         $this->assertTrue(true);
 
+    }*/
+
+ /*  public function testInsertUser()
+    {
+        $user1=new User();
+
+        $this->assertTrue($user1->save());
+    }*/
+
+
+
+ public function testUserCount(){
+     $this->assertEquals(50, User::count());
+ }
+   public function testDeleteUser()
+    {
+        $user2=User::inRandomOrder()->first();
+
+        $this->assertTrue($user2->delete());
+    }
+   public function testUpdateName()
+    {
+        $user3=User::inRandomOrder()->first();
+        $user3->name='Steve Smith';
+        $this->assertTrue($user3->save());
+
     }
 
-   public function insertUser()
-    {
-        $user=new User();
-        $this->assertTrue($user->save());
-    }
-    public function deleteUser()
-    {
-        $user= new User();
-        $user->save();
-        $this->assertTrue($user->delete());
-    }
-    public function updateName()
-    {
-        $user=User::inRandomOrder()->first();
-        $user->name='Steve Smith';
-        $this->assertTrue($user->save());
 
-    }
 }
 
