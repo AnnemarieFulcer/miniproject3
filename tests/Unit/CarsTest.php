@@ -54,5 +54,10 @@ class CarsTest extends TestCase
         $this->assertInternalType('string', $car1->year);
 
     }
+    public function testMakelValue(){
+        $car4=car::inRandomOrder()->first();
+        $car4=$car4->make;
+        $this->assertContains($car4, array("honda", "ford", "toyota"));
+    }
 
 }
