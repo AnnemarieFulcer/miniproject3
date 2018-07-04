@@ -46,14 +46,7 @@ class CarsTest extends TestCase
 
     public function testCarCount(){
         $this->assertEquals(50, car::count());
-    }/*
-    public function testUpdateName()
-    {
-        $user3=User::inRandomOrder()->first();
-        $user3->name='Steve Smith';
-        $this->assertTrue($user3->save());
-
-    }*/
+    }
 
     public function testYearType()
     {
