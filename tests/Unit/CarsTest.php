@@ -44,9 +44,9 @@ class CarsTest extends TestCase
         $this->assertTrue($car3->delete());
     }
 
-   /* public function testUserCount(){
-        $this->assertEquals(50, User::count());
-    }
+    public function testCarCount(){
+        $this->assertEquals(50, car::count());
+    }/*
     public function testUpdateName()
     {
         $user3=User::inRandomOrder()->first();
