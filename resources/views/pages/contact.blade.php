@@ -3,7 +3,7 @@
     <br><br><br>
 <h1>This is the contact page</h1>
 
-    <form action="" method="">
+    <form action="{{route('contact.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="email">Email address</label>
